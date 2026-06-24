@@ -1,17 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse #Для работы с запросами
 
-def index(request):
-    header = 'hello, user'
-    array = [1, 2, 3, 4, 5]
-    user = {'name': 'Bob', 'age': 23}
-    address = ('Ленина', 2, 54, 23)
+class Person:
 
+    def __init__(self, name):
+        self.name = name
+
+def index(request):
+    
     data = {
-        'header': header,
-        'array': array,
-        'user': user,
-        'address': address
+        'array': []
     }
 
     return render(request, "shop/index.html", context=data)
@@ -21,3 +19,4 @@ def about(request):
 
 def contact(request):
     return render(request, 'shop/contact.html')
+

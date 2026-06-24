@@ -6,9 +6,42 @@
     <title>Главная страница</title>
 </head>
 <body>
-    <h1>{{ header }}</h1>
-    <p>{{ address.1 }}</p>
-    <p>{{ array.0 }}</p>
-    <p>{{ user.age }}</p>  
+
+    <!-- Person: {{ person }}
+
+    {% autoescape off %}
+        Person: {{ person }}
+    {% endautoescape %} -->
+
+    {% comment %}
+        <p>Это комментарий!</p>
+    {% endcomment %}
+
+    <!-- {% if number > 0 %}
+        <p>Число {{ number }} - положительное</p>
+    {% else %}
+        <p>Число {{ number }} - отрицательное</p>
+    {% endif %} -->
+
+    <!-- <ul>
+        {% for numbers in array %}
+            <li>{{ numbers }}</li>
+            {% empty %}
+            <li>Коллекция пустая!</li>
+        {% endfor %}
+    </ul> -->
+
+    <!-- {% with name="Bob" age="23" %}
+    <div>
+        <p>Name: {{ name }}</p>
+        <p>Age: {{ age }}</p>
+    </div>
+    {% endwith %} -->
+
+    <p>{% now "Y" %}</p>
+    <p>{% now "F j Y" %}</p>
+    <p>{% now "N, j, Y" %}</p>
+    <p>{% now "N j, Y, P" %}</p>
+
 </body>
 </html>
