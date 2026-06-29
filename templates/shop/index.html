@@ -1,55 +1,17 @@
 <!DOCTYPE html>
+{% load static %} <!--Подгрузка статических файлов--> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная страница</title>
+    <link rel="stylesheet" href="{% static "style/styles.css" %}" />
 </head>
 <body>
 
-    <!-- Person: {{ person }}
+    <h1>глупи котята</h1>
 
-    {% autoescape off %}
-        Person: {{ person }}
-    {% endautoescape %} -->
-
-    {% comment %}
-        <p>Это комментарий!</p>
-    {% endcomment %}
-
-    <!-- {% if number > 0 %}
-        <p>Число {{ number }} - положительное</p>
-    {% else %}
-        <p>Число {{ number }} - отрицательное</p>
-    {% endif %} -->
-
-    <!-- <ul>
-        {% for numbers in array %}
-            <li>{{ numbers }}</li>
-            {% empty %}
-            <li>Коллекция пустая!</li>
-        {% endfor %}
-    </ul> -->
-
-    <!-- {% with name="Bob" age="23" %}
-    <div>
-        <p>Name: {{ name }}</p>
-        <p>Age: {{ age }}</p>
-    </div>
-    {% endwith %} -->
-
-    <!-- <p>{% now "Y" %}</p>
-    <p>{% now "F j Y" %}</p>
-    <p>{% now "N, j, Y" %}</p>
-    <p>{% now "N j, Y, P" %}</p> -->
-
-    <!-- {% for _, value in data1.items %}
-        <h2>{{ value|add:" - Клиент"|title }}</h2>
-    {% endfor %} -->
-
-    <!-- {{ users|join:", " }}
-
-    {{ users|slice:"1:"}} -->
-
+    <img src="{% static 'img/silly_cat_one.jpg' %}" alt="гупеньки кот 1">
+    
 </body>
 </html>
