@@ -9,7 +9,12 @@ class Person:
 def index(request):
     
     data = {
-        'array': []
+        'data1': {
+            'client_one': 'Иван Иванов',
+            'client_two': 'Мария не звонить',
+            'client_tree': 'Евгений рыбалка',
+        },
+        'users': ["Bob", "Petr", "Alex"],
     }
 
     return render(request, "shop/index.html", context=data)
