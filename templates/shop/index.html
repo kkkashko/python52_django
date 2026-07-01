@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-{% load static %} <!--Подгрузка статических файлов--> 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная страница</title>
-    <link rel="stylesheet" href="{% static "style/styles.css" %}" />
-</head>
-<body>
 
-    <h1>глупи котята</h1>
+ 
+{% extends "shop/base.html" %}
+{% load static %} <!--Подгрузка статических файлов-->
 
-    <img src="{% static 'img/silly_cat_one.jpg' %}" alt="гупеньки кот 1">
+{% block title %} Index {% endblock title %}
+{% block header %} глупи котята {% endblock header %}
+
+
+{% block banner %}{% include "banner.html" %}{% endblock banner %}
+
+{% block content %}<img src="{% static 'img/silly_cat_one.jpg' %}" alt="гупеньки кот 1"> {% endblock content %}
     
-</body>
-</html>

@@ -8,16 +8,7 @@ class Person:
 
 def index(request):
     
-    data = {
-        'data1': {
-            'client_one': 'Иван Иванов',
-            'client_two': 'Мария не звонить',
-            'client_tree': 'Евгений рыбалка',
-        },
-        'users': ["Bob", "Petr", "Alex"],
-    }
-
-    return render(request, "shop/index.html", context=data)
+    return render(request, "shop/index.html", context={'tutorial': 12345})
 
 def about(request):
     return render(request, 'shop/about.html')
